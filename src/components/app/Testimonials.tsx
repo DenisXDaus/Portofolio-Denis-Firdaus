@@ -1,0 +1,30 @@
+import { testimonials } from "../../data/testimonials";
+
+export default function Testimonials() {
+  return (
+    <section className="py-24">
+
+      <h2 className="text-4xl font-bold text-center">
+        Testimonials
+      </h2>
+
+      <div className="max-w-5xl mx-auto mt-10 grid md:grid-cols-2 gap-6">
+
+        {testimonials.map((item) => (
+          <div
+            key={item.id}
+            className="border rounded-2xl p-6"
+          >
+            <p>{item.message}</p>
+
+            <h4 className="mt-4 font-bold">
+              {item.name}
+            </h4>
+          </div>
+        ))}
+
+      </div>
+
+    </section>
+  );
+}
