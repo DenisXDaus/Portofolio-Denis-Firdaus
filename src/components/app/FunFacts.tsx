@@ -21,7 +21,7 @@ export default function FunFacts() {
   return (
     <section className="py-24">
 
-      <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-5">
+      <div className="max-w-6xl px-8 mx-auto grid grid-cols-2 md:grid-cols-4 gap-5">
 
         {stats.map((item) => (
           <div

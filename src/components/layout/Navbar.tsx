@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import ThemeToggle from "./ThemeToogle";
+import ThemeToggle from "./ThemeToggle";
 
 export default function Navbar() {
   const [open, setOpen] =
@@ -47,6 +47,7 @@ export default function Navbar() {
           onClick={() =>
             setOpen(!open)
           }
+          aria-label={open ? "Close menu" : "Open menu"}
         >
           {open ? <X /> : <Menu />}
         </button>

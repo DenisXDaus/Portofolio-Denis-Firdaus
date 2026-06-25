@@ -1,5 +1,4 @@
-import { Helmet }
-from "react-helmet-async";
+import { Helmet } from "react-helmet-async";
 
 interface Props {
   title: string;
@@ -12,26 +11,19 @@ export default function SEO({
 }: Props) {
   return (
     <Helmet>
-
-      <title>
-        {title}
-      </title>
-
+      <title>{title}</title>
       <meta
         name="description"
         content={description}
       />
-
       <meta
         property="og:title"
         content={title}
       />
-
       <meta
         property="og:description"
         content={description}
       />
-
     </Helmet>
   );
 }

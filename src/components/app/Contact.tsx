@@ -8,6 +8,7 @@ export default function Contact() {
         className="
         max-w-xl
         mx-auto
+        px-10
         "
       >
         <h2

@@ -20,6 +20,7 @@ export default function Projects() {
       <div
         className="
         max-w-6xl
+        px-8
         mx-auto
         mt-12
         grid

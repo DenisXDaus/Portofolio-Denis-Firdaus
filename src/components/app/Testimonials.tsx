@@ -8,7 +8,7 @@ export default function Testimonials() {
         Testimonials
       </h2>
 
-      <div className="max-w-5xl mx-auto mt-10 grid md:grid-cols-2 gap-6">
+      <div className="max-w-5xl px-8 mx-auto mt-10 grid md:grid-cols-2 gap-6">
 
         {testimonials.map((item) => (
           <div

@@ -14,16 +14,10 @@ import Footer from "./components/layout/Footer";
 export default function App() {
   return (
     <>
-    <>
       <SEO
-          title="Denis Firdaus Portfolio"
-          description="Frontend Developer Portfolio"
-        />
-
-        <Navbar />
-
-        ...
-      </>
+        title="Denis Firdaus Portfolio"
+        description="Frontend Developer Portfolio"
+      />
       <Navbar />
       <ScrollTop />
       <Hero />

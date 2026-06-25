@@ -8,7 +8,7 @@ export default function Skills() {
         Skills
       </h2>
 
-      <div className="max-w-5xl mx-auto mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div className="max-w-5xl px-8 mx-auto mt-10 grid grid-cols-2 md:grid-cols-4 gap-4">
 
         {skills.map((skill) => (
           <div

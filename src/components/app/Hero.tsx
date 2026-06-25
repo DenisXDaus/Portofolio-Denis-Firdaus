@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
-import profile from "../assets/profile.webp";
+import profile from "../../assets/profile.webp";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center">
+    <section className="min-h-screen py-24 flex items-center">
 
-      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+      <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 md:px-8 gap-10">
 
         <motion.div
+          className="md:pt-20"
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
         >
