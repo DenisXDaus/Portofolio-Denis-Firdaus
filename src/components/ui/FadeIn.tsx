@@ -21,7 +21,8 @@ export default function FadeIn({
         once: true,
       }}
       transition={{
-        duration: 0.5,
+        duration: 1,
+        delay: 0.5,
       }}
     >
       {children}

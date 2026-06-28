@@ -1,16 +1,19 @@
 import { motion } from "framer-motion";
 import profile from "../../assets/profile.webp";
+import {FaGithub} from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section className="min-h-screen py-24 flex items-center">
+    <section id="hero" className="min-h-screen py-24 flex items-center">
 
       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 md:px-8 gap-10">
 
         <motion.div
           className="md:pt-20"
           initial={{ opacity: 0, x: -40 }}
-          animate={{ opacity: 1, x: 0 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.5 }}
         >
           <p className="text-sky-400">
             Halo, Saya Denis Firdaus
@@ -22,7 +25,7 @@ export default function Hero() {
 
           <p className="mt-6 text-slate-400">
             Sedang mendalami React,
-            Next.js dan Fullstack Development
+            Vite.js dan Fullstack Development
             sambil membangun project nyata.
           </p>
 
@@ -36,10 +39,11 @@ export default function Hero() {
             </a>
 
             <a
-              href="https://github.com/USERNAME"
+              href="https://github.com/DenisXDaus"
               target="_blank"
               className="border px-6 py-3 rounded-xl"
             >
+              <FaGithub className="inline mr-2 my-auto" />
               Github
             </a>
 
@@ -47,8 +51,10 @@ export default function Hero() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          initial={{ opacity: 0, x: 40 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1, delay: 0.5 }}
         >
           <img
             src={profile}

@@ -65,20 +65,20 @@ export default function Footer() {
               href={profile.github}
               target="_blank"
             >
-              <FaGithub />
+              <FaGithub size={24} />
             </a>
 
             <a
               href={profile.linkedin}
               target="_blank"
             >
-              <FaLinkedin />
+              <FaLinkedin size={24} />
             </a>
 
             <a
               href={`mailto:${profile.email}`}
             >
-              <Mail />
+              <Mail size={24} />
             </a>
           </div>
         </div>

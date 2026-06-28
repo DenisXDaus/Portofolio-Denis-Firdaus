@@ -1,75 +1,79 @@
+import FadeIn from "../ui/FadeIn";
+
 export default function Contact() {
   return (
     <section
       id="contact"
       className="py-24"
     >
-      <div
-        className="
-        max-w-xl
-        mx-auto
-        px-10
-        "
-      >
-        <h2
+      <FadeIn>
+        <div
           className="
-          text-center
-          text-4xl
-          font-bold
-          mb-10
+          max-w-xl
+          mx-auto
+          px-10
           "
         >
-          Contact Me
-        </h2>
-
-        <form
-          className="
-          flex
-          flex-col
-          gap-4
-          "
-        >
-          <input
-            type="text"
-            placeholder="Name"
+          <h2
             className="
-            border
-            rounded-xl
-            p-4
-            "
-          />
-
-          <input
-            type="email"
-            placeholder="Email"
-            className="
-            border
-            rounded-xl
-            p-4
-            "
-          />
-
-          <textarea
-            rows={5}
-            placeholder="Message"
-            className="
-            border
-            rounded-xl
-            p-4
-            "
-          />
-
-          <button
-            className="
-            bg-sky-500
-            py-4
-            rounded-xl
+            text-center
+            text-4xl
+            font-bold
+            mb-10
             "
           >
-            Send Message
-          </button>
-        </form>
-      </div>
+            Contact Me
+          </h2>
+
+          <form
+            className="
+            flex
+            flex-col
+            gap-4
+            "
+          >
+            <input
+              type="text"
+              placeholder="Name"
+              className="
+              border
+              rounded-xl
+              p-4
+              "
+            />
+
+            <input
+              type="email"
+              placeholder="Email"
+              className="
+              border
+              rounded-xl
+              p-4
+              "
+            />
+
+            <textarea
+              rows={5}
+              placeholder="Message"
+              className="
+              border
+              rounded-xl
+              p-4
+              "
+            />
+
+            <button
+              className="
+              bg-sky-500
+              py-4
+              rounded-xl
+              "
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </FadeIn>
     </section>
   );
 }

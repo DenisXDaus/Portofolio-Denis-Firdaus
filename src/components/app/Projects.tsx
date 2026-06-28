@@ -1,24 +1,23 @@
 import ProjectCard from "../ui/ProjectCard";
 import { projects } from "../../data/projects";
+import FadeIn from "../ui/FadeIn";
 
 export default function Projects() {
   return (
-    <section
-      id="projects"
-      className="py-24"
-    >
-      <h2
-        className="
-        text-center
-        text-4xl
-        font-bold
+    <section id="projects" className="py-24">
+      <FadeIn>
+        <h2
+          className="
+          text-center
+          text-4xl
+          font-bold
         "
-      >
-        Projects
-      </h2>
+        >
+          Projects
+        </h2>
 
-      <div
-        className="
+        <div
+          className="
         max-w-6xl
         px-8
         mx-auto
@@ -27,14 +26,12 @@ export default function Projects() {
         md:grid-cols-2
         gap-8
         "
-      >
-        {projects.map((project) => (
-          <ProjectCard
-            key={project.id}
-            {...project}
-          />
-        ))}
-      </div>
+        >
+          {projects.map((project) => (
+            <ProjectCard key={project.id} {...project} />
+          ))}
+        </div>
+      </FadeIn>
     </section>
   );
 }

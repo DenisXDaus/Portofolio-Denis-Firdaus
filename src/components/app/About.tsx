@@ -1,4 +1,6 @@
 import { profile } from "../../data/profile";
+import FadeIn from "../ui/FadeIn";
+
 
 export default function About() {
   return (
@@ -6,6 +8,7 @@ export default function About() {
       id="about"
       className="py-24"
     >
+      <FadeIn>
       <div className="max-w-5xl mx-auto px-6">
 
         <h2
@@ -29,6 +32,7 @@ export default function About() {
         </p>
 
       </div>
+      </FadeIn>
     </section>
   );
 }

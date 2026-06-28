@@ -94,11 +94,11 @@ export default function ProjectCard({
           "
         >
           <a href={github}>
-            <FaGithub />
+            <FaGithub size={24} />
           </a>
 
           <a href={demo}>
-            <ExternalLink />
+            <ExternalLink size={24} />
           </a>
         </div>
       </div>
