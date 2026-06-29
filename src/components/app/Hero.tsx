@@ -19,11 +19,11 @@ export default function Hero() {
             Halo, Saya Denis Firdaus
           </p>
 
-          <h1 className="text-5xl md:text-7xl font-bold mt-4">
+          <h1 className="text-4xl md:text-6xl font-bold mt-4">
             Frontend Developer
           </h1>
 
-          <p className="mt-6 text-slate-400">
+          <p className="mt-6 text-(--text)">
             Sedang mendalami React,
             Vite.js dan Fullstack Development
             sambil membangun project nyata.
@@ -59,7 +59,7 @@ export default function Hero() {
           <img
             src={profile}
             alt="Denis"
-            className="rounded-3xl"
+            className="rounded-3xl w-50 md:w-full md:rounded-3xl mx-auto"
           />
         </motion.div>
 

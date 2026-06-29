@@ -5,7 +5,7 @@ export default function Timeline() {
     <section className="py-24">
       <FadeIn>
         <div className="max-w-4xl mx-auto px-6">
-          <h2 className="text-4xl font-bold text-center">Learning Journey</h2>
+          <h2 className="text-3xl font-bold text-center">Learning Journey</h2>
 
           <div className="mt-12">
             {timeline.map((item) => (

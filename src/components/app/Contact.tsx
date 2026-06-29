@@ -2,44 +2,47 @@ import FadeIn from "../ui/FadeIn";
 
 export default function Contact() {
   return (
-    <section
-      id="contact"
-      className="py-24"
-    >
+    <section id="contact" className="py-24">
       <FadeIn>
         <div
           className="
           max-w-xl
+          text-(--text)
           mx-auto
-          px-10
+          px-6
           "
         >
-          <h2
-            className="
-            text-center
-            text-4xl
-            font-bold
-            mb-10
-            "
-          >
-            Contact Me
-          </h2>
-
           <form
             className="
             flex
             flex-col
-            gap-4
+            gap-2
+            bg-(--surface)
+            shadow-(--shadow-md)
+            rounded-xl
+            p-8
             "
           >
+            <h2
+              className="
+            text-center
+            text-3xl
+            font-bold
+            mb-10
+            "
+            >
+              Contact Me
+            </h2>
+
             <input
               type="text"
               placeholder="Name"
               className="
               border
               rounded-xl
-              p-4
+              p-3
               "
+              required
             />
 
             <input
@@ -48,8 +51,9 @@ export default function Contact() {
               className="
               border
               rounded-xl
-              p-4
+              p-3
               "
+              required
             />
 
             <textarea
@@ -58,14 +62,15 @@ export default function Contact() {
               className="
               border
               rounded-xl
-              p-4
+              p-3
               "
+              required
             />
 
             <button
               className="
               bg-sky-500
-              py-4
+              py-3
               rounded-xl
               "
             >

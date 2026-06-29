@@ -15,6 +15,7 @@ export default function Footer() {
     <footer
       className="
       border-t
+      border-(--border)
       py-10
       mt-24
       "
@@ -48,7 +49,7 @@ export default function Footer() {
 
             <p
               className="
-              text-slate-400
+              text-(--text)
               "
             >
               {profile.title}
@@ -87,7 +88,7 @@ export default function Footer() {
           className="
           text-center
           text-sm
-          text-slate-500
+          text-(--text)
           mt-8
           "
         >

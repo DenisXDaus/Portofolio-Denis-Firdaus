@@ -13,7 +13,7 @@ export default function About() {
 
         <h2
           className="
-          text-4xl
+          text-3xl
           font-bold
           mb-8
           "
@@ -23,7 +23,7 @@ export default function About() {
 
         <p
           className="
-          text-slate-400
+          text-(--text)
           leading-relaxed
           text-lg
           "

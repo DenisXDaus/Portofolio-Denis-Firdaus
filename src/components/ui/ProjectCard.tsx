@@ -26,7 +26,8 @@ export default function ProjectCard({
   return (
     <div
       className="
-      border
+      shadow-(--shadow-md)
+      bg-(--surface)
       rounded-2xl
       overflow-hidden
       hover:-translate-y-2

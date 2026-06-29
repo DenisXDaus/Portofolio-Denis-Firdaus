@@ -14,8 +14,8 @@ export default function Navbar() {
       w-full
       z-50
       backdrop-blur-md
-      shadow-md
-      shadow-white/50
+      border-b
+      border-(--border)
       "
     >
       <div
@@ -71,7 +71,7 @@ export default function Navbar() {
               transition={{ duration: 0.1 }}
               className={`
                 fixed top-0 right-0 h-screen w-64
-                bg-(--bg) text-(--text)
+                bg-(--bg) text-(--text) border-(--border) border-l
                 flex flex-col gap-4 px-6 pb-5 pt-5
                 transform transition-transform duration-300 ease-in-out
                 ${open ? "translate-x-0" : "translate-x-full"}

@@ -9,7 +9,7 @@ export default function Projects() {
         <h2
           className="
           text-center
-          text-4xl
+          text-3xl
           font-bold
         "
         >
@@ -21,7 +21,7 @@ export default function Projects() {
         max-w-6xl
         px-8
         mx-auto
-        mt-12
+        mt-10
         grid
         md:grid-cols-2
         gap-8

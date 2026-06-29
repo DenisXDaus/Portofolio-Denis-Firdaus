@@ -9,10 +9,14 @@ export const stats = [
   },
   {
     title: "Technologies",
-    value: "8+",
+    value: "9+",
   },
   {
     title: "Years Learning",
+    value: "3+",
+  },
+  {
+    title: "Framework Experience",
     value: "2+",
   },
 ];

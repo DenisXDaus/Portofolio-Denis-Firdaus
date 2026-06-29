@@ -10,7 +10,7 @@ export default function FunFacts() {
           {stats.map((item) => (
             <div
               key={item.title}
-              className="border rounded-2xl p-6 text-center"
+              className="shadow-(--shadow-md) bg-(--surface) rounded-2xl p-6 text-center"
             >
               <h3 className="text-4xl font-bold">
                 {item.value}
