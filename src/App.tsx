@@ -16,7 +16,7 @@ export default function App() {
     <>
       <SEO
         title="Denis Firdaus Portfolio"
-        description="Frontend Developer Portfolio"
+        description="Software Developer Portfolio"
       />
       <Navbar />
       <ScrollTop />
