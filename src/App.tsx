@@ -88,8 +88,9 @@ export default function App() {
   return (
     <>
       <SEO
-        title="Denis Firdaus Portfolio"
-        description="Software Developer Portfolio"
+        title="Denis Firdaus — Frontend Developer"
+        description="Portofolio Denis Firdaus, frontend developer yang membangun pengalaman web dengan React, TypeScript, dan teknologi modern."
+        url="https://portofolio-denis-firdaus.vercel.app/"
       />
       <Navbar />
       <ScrollTop />
