@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 
 interface Props {
   children: React.ReactNode;
@@ -7,22 +7,22 @@ interface Props {
 export default function FadeIn({
   children,
 }: Props) {
+  const shouldReduceMotion = useReducedMotion();
+
   return (
     <motion.div
-      initial={{
-        opacity: 0,
-        y: 30,
-      }}
+      initial={shouldReduceMotion ? false : { opacity: 0, y: 24 }}
       whileInView={{
         opacity: 1,
         y: 0,
       }}
       viewport={{
         once: true,
+        amount: 0.15,
       }}
       transition={{
-        duration: 1,
-        delay: 0.5,
+        duration: 0.55,
+        ease: [0.22, 1, 0.36, 1],
       }}
     >
       {children}

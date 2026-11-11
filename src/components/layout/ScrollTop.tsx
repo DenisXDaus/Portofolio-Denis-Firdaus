@@ -34,13 +34,22 @@ export default function ScrollTop() {
           behavior: "smooth",
         })
       }
+      aria-label="Kembali ke atas"
       className="
       fixed
+      z-40
       bottom-6
       right-6
       p-3
       rounded-full
-      border
+      border border-(--border)
+      bg-(--surface)
+      text-(--text)
+      shadow-(--shadow)
+      transition duration-200
+      hover:-translate-y-1
+      hover:border-(--accent)
+      hover:text-(--accent)
       "
     >
       <ArrowUp />

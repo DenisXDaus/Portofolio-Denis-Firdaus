@@ -1,100 +1,27 @@
-import {
-  Mail
-} from "lucide-react";
-
-import {
-    FaGithub,
-    FaLinkedin,
-} from "react-icons/fa";
-
-import { profile }
-from "../../data/profile";
+import { ArrowUp, Terminal } from "lucide-react";
+import { profile } from "../../data/profile";
 
 export default function Footer() {
   return (
-    <footer
-      className="
-      border-t
-      border-(--border)
-      py-10
-      mt-24
-      "
-    >
-      <div
-        className="
-        max-w-6xl
-        mx-auto
-        px-6
-        "
-      >
-        <div
-          className="
-          flex
-          flex-col
-          md:flex-row
-          justify-between
-          items-center
-          gap-5
-          "
-        >
-          <div>
-            <h3
-              className="
-              font-bold
-              text-xl
-              "
-            >
-              {profile.name}
-            </h3>
-
-            <p
-              className="
-              text-(--text)
-              "
-            >
-              {profile.title}
-            </p>
-          </div>
-
-          <div
-            className="
-            flex
-            gap-5
-            "
-          >
-            <a
-              href={profile.github}
-              target="_blank"
-            >
-              <FaGithub size={24} />
-            </a>
-
-            <a
-              href={profile.linkedin}
-              target="_blank"
-            >
-              <FaLinkedin size={24} />
-            </a>
-
-            <a
-              href={`mailto:${profile.email}`}
-            >
-              <Mail size={24} />
-            </a>
-          </div>
-        </div>
-
-        <p
-          className="
-          text-center
-          text-sm
-          text-(--text)
-          mt-8
-          "
-        >
-          © {new Date().getFullYear()}{" "}
-          {profile.name}
+    <footer className="px-5 pb-8 pt-5 sm:px-8">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 border-t border-(--border) pt-6 text-center sm:flex-row sm:text-left">
+        <p className="inline-flex items-center gap-2 font-terminal text-xs text-(--muted)">
+          <Terminal size={14} className="text-(--accent)" />
+          <span>
+            <span className="text-(--text)">{profile.name}</span> · dibuat dengan rasa ingin tahu
+          </span>
         </p>
+        <div className="flex items-center gap-4">
+          <span className="font-terminal text-[11px] text-(--muted)">
+            © {new Date().getFullYear()}
+          </span>
+          <a
+            href="#hero"
+            className="inline-flex items-center gap-1.5 font-terminal text-[11px] text-(--muted) transition hover:text-(--accent)"
+          >
+            kembali ke atas <ArrowUp size={13} />
+          </a>
+        </div>
       </div>
     </footer>
   );

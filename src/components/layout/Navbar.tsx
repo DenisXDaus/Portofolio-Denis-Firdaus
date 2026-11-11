@@ -1,103 +1,85 @@
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
+import { Menu, Terminal, X } from "lucide-react";
 import ThemeToggle from "./ThemeToggle";
-import { motion, AnimatePresence} from "framer-motion";
+
+const links = [
+  { href: "#about", label: "Tentang" },
+  { href: "#skills", label: "Toolkit" },
+  { href: "#projects", label: "Proyek" },
+  { href: "#contact", label: "Kontak" },
+];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav
-      className="
-      fixed
-      top-0
-      w-full
-      z-50
-      backdrop-blur-md
-      border-b
-      border-(--border)
-      "
-    >
-      <div
-        className="
-        max-w-6xl
-        mx-auto
-        px-6
-        py-4
-        flex
-        justify-between
-        items-center
-        "
-      >
-        <h1 className="font-bold text-xl">Denis.dev</h1>
+    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-3 sm:px-6">
+      <nav className="mx-auto flex max-w-6xl items-center justify-between rounded-xl border border-(--border) bg-(--bg-elevated) px-4 py-3 shadow-(--shadow) backdrop-blur-xl sm:px-5">
+        <a
+          href="#hero"
+          className="inline-flex items-center gap-2 font-terminal text-sm font-medium"
+          aria-label="Denis.dev, kembali ke beranda"
+        >
+          <Terminal size={17} className="text-(--accent)" />
+          <span>denis<span className="text-(--accent)">.dev</span></span>
+        </a>
 
-        <div className="hidden md:flex gap-6 items-center">
-          <a href="#hero">Home</a>
-          <a href="#about">About</a>
-          <a href="#skills">Skills</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
-
+        <div className="hidden items-center gap-7 md:flex">
+          {links.map((link, index) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="font-terminal text-xs text-(--muted) transition-colors hover:text-(--accent)"
+            >
+              <span className="mr-1 text-(--accent)">0{index + 1}.</span>
+              {link.label}
+            </a>
+          ))}
           <ThemeToggle />
         </div>
 
         <button
-          className="md:hidden"
-          onClick={() => setOpen(!open)}
-          aria-label={open ? "Close menu" : "Open menu"}
+          type="button"
+          className="grid size-10 place-items-center rounded-lg border border-(--border) text-(--text) transition hover:border-(--accent) hover:text-(--accent) md:hidden"
+          onClick={() => setOpen((current) => !current)}
+          aria-label={open ? "Tutup menu" : "Buka menu"}
+          aria-expanded={open}
+          aria-controls="mobile-navigation"
         >
-          {open ? <X /> : <Menu />}
+          {open ? <X size={19} /> : <Menu size={19} />}
         </button>
-      </div>
+      </nav>
 
       <AnimatePresence>
         {open && (
-          <>
-            {/* Overlay */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 0.5 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.1, delay: 0.5 }}
-              className="fixed inset-0 bg-black/40 h-screen md:hidden"
-              onClick={() => setOpen(false)}
-            />
-
-            {/* Sidebar */}
-            <motion.div
-              initial={{ x: "100%" }}
-              animate={{ x: 0 }}
-              exit={{ x: "100%" }}
-              transition={{ duration: 0.1 }}
-              className={`
-                fixed top-0 right-0 h-screen w-64
-                bg-(--bg) text-(--text) border-(--border) border-l
-                flex flex-col gap-4 px-6 pb-5 pt-5
-                transform transition-transform duration-300 ease-in-out
-                ${open ? "translate-x-0" : "translate-x-full"}
-                md:hidden
-              `}
-            >
-              <div className="flex justify-between items-center border-b border-(--border)">
-                <h2 className="font-bold text-lg">Denis.dev</h2>
-                <button onClick={() => setOpen(false)}>
-                  <X size={24} />
-                </button>
-              </div>
-
-              {/* Menu Items */}
-              <div className="flex flex-col gap-4">
-                <a href="#hero">Home</a>
-                <a href="#about">About</a>
-                <a href="#skills">Skills</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
+          <motion.div
+            id="mobile-navigation"
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.18 }}
+            className="mx-auto mt-2 max-w-6xl rounded-xl border border-(--border) bg-(--bg-elevated) p-4 shadow-(--shadow) backdrop-blur-xl md:hidden"
+          >
+            <div className="flex flex-col gap-1">
+              {links.map((link, index) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  onClick={() => setOpen(false)}
+                  className="rounded-lg px-3 py-3 font-terminal text-xs text-(--muted) transition hover:bg-(--surface) hover:text-(--accent)"
+                >
+                  <span className="mr-2 text-(--accent)">0{index + 1}.</span>
+                  {link.label}
+                </a>
+              ))}
+              <div className="mt-2 border-t border-(--border) pt-3">
                 <ThemeToggle />
               </div>
-            </motion.div>
-          </>
+            </div>
+          </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+    </header>
   );
 }
